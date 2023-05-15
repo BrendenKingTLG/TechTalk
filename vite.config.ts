@@ -6,3 +6,4 @@ export default defineConfig({
   base: "/TechTalk/",
   plugins: [react()],
 })
+
