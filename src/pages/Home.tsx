@@ -15,15 +15,12 @@ const Home = () => {
             gap: "1em",
             overflowY: "scroll",
             overflowX: "hidden",
-            height: "89%",
-            top: "7em",
-            paddingBottom: "2.5em",
-            paddingTop: "1em",
+            height: "100%",
+            paddingBottom: "10em",
+            paddingTop: "3em",
             flexFlow: "wrap",
           }}
         >
-          <TopNav />
-
           <div className="row">
             <div id="postBox" className="col-12">
               <PostCard />
@@ -34,6 +31,7 @@ const Home = () => {
               <PostCard />
             </div>
           </div>
+          <TopNav />
           <NavBottom />
         </div>
       </div>
