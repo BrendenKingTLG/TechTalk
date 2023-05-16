@@ -6,7 +6,6 @@ const Home = () => {
   return (
     <>
       <div className="container-fluid m-0 p-0">
-        <TopNav />
         <div
           className="container d-flex justify-content-center"
           style={{
@@ -14,14 +13,17 @@ const Home = () => {
             position: "absolute",
             flexDirection: "column",
             gap: "1em",
-            overflow: "scroll",
+            overflowY: "scroll",
+            overflowX: "hidden",
             height: "89%",
-            top: "3em",
+            top: "7em",
             paddingBottom: "2.5em",
             paddingTop: "1em",
             flexFlow: "wrap",
           }}
         >
+          <TopNav />
+
           <div className="row">
             <div id="postBox" className="col-12">
               <PostCard />
@@ -32,8 +34,8 @@ const Home = () => {
               <PostCard />
             </div>
           </div>
+          <NavBottom />
         </div>
-        <NavBottom />
       </div>
     </>
   );
