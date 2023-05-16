@@ -5,7 +5,7 @@ export function TopNav() {
     <>
       <nav id="nav">
         <a href="settings">
-          <BsGear size="1em" />
+          <BsGear size="1.5em" />
         </a>
         <h2
           className="d-flex justify-content-center flex-wrap align-content-center"
@@ -14,7 +14,7 @@ export function TopNav() {
           Tech Talk
         </h2>
         <a href="search">
-          <BsSearch size="1em" />
+          <BsSearch size="1.5em" />
         </a>
       </nav>
     </>

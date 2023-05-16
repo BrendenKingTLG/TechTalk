@@ -11,19 +11,19 @@ const NavBottom = () => {
     <>
       <nav id="navBottom">
         <Link to="/">
-          <BsHouseDoor size="1em" />
+          <BsHouseDoor size="1.5em" />
         </Link>
 
         <Link to="/Jobs">
-          <BsCash size="1em" />
+          <BsCash size="1.5em" />
         </Link>
 
         <Link to="/Messages">
-          <BsChatLeftText size="1em" />
+          <BsChatLeftText size="1.5em" />
         </Link>
 
         <Link to="/Profile">
-          <BsPersonCircle size="1em" />
+          <BsPersonCircle size="1.5em" />
         </Link>
       </nav>
 
