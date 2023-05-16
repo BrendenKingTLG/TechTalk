@@ -1,5 +1,5 @@
 import { TopNav } from "../components/TopNav";
-import NavBottom from "./NavBottom";
+import NavBottom from "../components/NavBottom";
 
 const Messages = () => {
   return (
