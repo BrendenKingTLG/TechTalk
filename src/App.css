@@ -42,7 +42,7 @@ html, body, #root, .container-fluid{
   padding-bottom: 1.5em;
 }
 
-#navBottom a:active{
+#navBottom a.active{
   color: rgb(142, 0, 250);
 }
 
