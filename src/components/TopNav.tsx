@@ -1,43 +1,95 @@
 import { BsGear, BsSearch } from "react-icons/bs";
 
 function openSettings() {
-  document!.getElementById("mySidenav")!.style.width = "250px";
-  document!.getElementById("root")!.style.marginLeft = "250px";
+  document!.getElementById("overlay")!.style.display = "flex";
+  console.log("ldnfalkjds");
 }
 
 function closeSettings() {
-  document!.getElementById("mySidenav")!.style.width = "0ox";
-  document!.getElementById("root")!.style.marginLeft = "0px";
+  document!.getElementById("overlay")!.style.display = "none";
 }
 export function TopNav() {
   return (
     <>
       <nav id="nav">
-        <a href="settings" onClick={() => openSettings}>
+        <div onClick={() => openSettings()}>
           <BsGear size="1.5em" />
-          <div id="mySidenav" className="sidenav" style={{ width: "0px" }}>
-            <a
-              href="javascript:void(0)"
-              className="closebtn"
-              onClick={() => closeSettings}
+        </div>
+        <div id="overlay" className="sidenav">
+          <div className="form-check form-switch">
+            <input
+              className="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="flexSwitchCheckDefault"
+            />
+            <label
+              className="form-check-label"
+              htmlFor="flexSwitchCheckDefault"
             >
-              &times;
-            </a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
+              Default switch checkbox input
+            </label>
           </div>
-        </a>
+          <div className="form-check form-switch">
+            <input
+              className="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="flexSwitchCheckDefault"
+            />
+            <label
+              className="form-check-label"
+              htmlFor="flexSwitchCheckDefault"
+            >
+              Default switch checkbox input
+            </label>
+          </div>
+          <div className="form-check form-switch">
+            <input
+              className="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="flexSwitchCheckDefault"
+            />
+            <label
+              className="form-check-label"
+              htmlFor="flexSwitchCheckDefault"
+            >
+              Default switch checkbox input
+            </label>
+          </div>
+          <div className="form-check form-switch">
+            <input
+              className="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="flexSwitchCheckDefault"
+            />
+            <label
+              className="form-check-label"
+              htmlFor="flexSwitchCheckDefault"
+            >
+              Default switch checkbox input
+            </label>
+          </div>
+          <button
+            type="button"
+            className="btn btn-danger"
+            onClick={() => closeSettings()}
+            style={{ width: "8em", height: "4em", marginTop: "2em" }}
+          >
+            close
+          </button>
+        </div>
         <h2
           className="d-flex justify-content-center flex-wrap align-content-center"
           id="navTitle"
         >
           Tech Talk
         </h2>
-        <a href="search">
+        <div>
           <BsSearch size="1.5em" />
-        </a>
+        </div>
       </nav>
     </>
   );
