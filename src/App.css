@@ -44,6 +44,7 @@ html, body, #root, .container-fluid{
 
 #navBottom a.active{
   color: rgb(255, 255, 255);
+  fill: rgb(255, 255, 255);
 }
 
 #navBottom a{

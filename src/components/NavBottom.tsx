@@ -19,12 +19,7 @@ const NavBottom = () => {
           <BsCash size="1.5em" />
         </NavLink>
 
-        <NavLink
-          to="/Messages"
-          className={({ isActive }) =>
-            isActive ? "active-NavLink" : "NavLink"
-          }
-        >
+        <NavLink to="/Messages">
           <BsChatLeftText size="1.5em" />
         </NavLink>
 
