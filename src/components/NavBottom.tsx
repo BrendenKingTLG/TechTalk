@@ -1,30 +1,36 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import {
   BsHouseDoor,
   BsChatLeftText,
   BsCash,
   BsPersonCircle,
 } from "react-icons/bs";
+import { NavLink } from "react-router-dom";
 
 const NavBottom = () => {
   return (
     <>
       <nav id="navBottom">
-        <Link to="/">
+        <NavLink to="/">
           <BsHouseDoor size="1.5em" />
-        </Link>
+        </NavLink>
 
-        <Link to="/Jobs">
+        <NavLink to="/Jobs">
           <BsCash size="1.5em" />
-        </Link>
+        </NavLink>
 
-        <Link to="/Messages">
+        <NavLink
+          to="/Messages"
+          className={({ isActive }) =>
+            isActive ? "active-NavLink" : "NavLink"
+          }
+        >
           <BsChatLeftText size="1.5em" />
-        </Link>
+        </NavLink>
 
-        <Link to="/Profile">
+        <NavLink to="/Profile">
           <BsPersonCircle size="1.5em" />
-        </Link>
+        </NavLink>
       </nav>
 
       <Outlet />

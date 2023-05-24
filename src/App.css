@@ -43,11 +43,11 @@ html, body, #root, .container-fluid{
 }
 
 #navBottom a.active{
-  color: rgb(142, 0, 250);
+  color: rgb(255, 255, 255);
 }
 
 #navBottom a{
-  color: rgb(255, 255, 255);
+  color: rgb(47, 47, 47);
 }
 
 #nav a{
