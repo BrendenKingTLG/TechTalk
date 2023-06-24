@@ -1,5 +1,3 @@
-import { TopNav } from "../components/TopNav";
-import NavBottom from "../components/NavBottom";
 import PostCard from "../components/PostCard";
 
 const Home = () => {
@@ -37,8 +35,6 @@ const Home = () => {
               <div style={{ height: "7em" }}></div>
             </div>
           </div>
-          <TopNav />
-          <NavBottom />
         </div>
       </div>
     </>

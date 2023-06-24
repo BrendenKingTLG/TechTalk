@@ -1,16 +1,21 @@
-import { FormEvent, useState } from "react";
+import React, { FormEvent, useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
 import { useNavigate } from "react-router-dom";
 export const userStatus = auth.currentUser;
-
+import StateOption from "../components/StateOption";
+import CityOption from "../components/CityOption";
 const Login = () => {
   const navigate = useNavigate();
   const [userInfo, setUserInfo] = useState({
-    name: "",
+    firstnName: "",
+    lastName: "",
     email: "",
     password: "",
     repeatPassword: "",
+    state: "",
+    city: "",
+    location: "",
   });
 
   const createAcc = (e: FormEvent) => {
@@ -25,7 +30,7 @@ const Login = () => {
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
-          console.log(errorCode, errorMessage);
+          alert(errorCode + " " + errorMessage);
         });
     } else {
       return;
@@ -54,24 +59,6 @@ const Login = () => {
                       </p>
 
                       <form className="mx-1 mx-md-4">
-                        <div className="d-flex flex-row align-items-center mb-4">
-                          <i className="fas fa-user fa-lg me-3 fa-fw"></i>
-                          <div className="form-outline flex-fill mb-0">
-                            <input
-                              type="text"
-                              id="form3Example1c"
-                              className="form-control"
-                              onChange={(e) => handleChange(e)}
-                            />
-                            <label
-                              className="form-label"
-                              htmlFor="form3Example1c"
-                            >
-                              Your Name
-                            </label>
-                          </div>
-                        </div>
-
                         <div className="d-flex flex-row align-items-center mb-4">
                           <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
                           <div className="form-outline flex-fill mb-0">
@@ -122,6 +109,98 @@ const Login = () => {
                               htmlFor="form3Example4cd"
                             >
                               Repeat your password
+                            </label>
+                          </div>
+                        </div>
+
+                        <div className="d-flex flex-row align-items-center mb-4">
+                          <i className="fas fa-key fa-lg me-3 fa-fw"></i>
+                          <div className="form-outline flex-fill mb-0">
+                            <input
+                              type=""
+                              id="firstName"
+                              className="form-control"
+                              onChange={(e) => handleChange(e)}
+                            />
+                            <label
+                              className="form-label"
+                              htmlFor="form3Example4cd"
+                            >
+                              First name
+                            </label>
+                          </div>
+                        </div>
+
+                        <div className="d-flex flex-row align-items-center mb-4">
+                          <i className="fas fa-key fa-lg me-3 fa-fw"></i>
+                          <div className="form-outline flex-fill mb-0">
+                            <input
+                              type=""
+                              id="lastName"
+                              className="form-control"
+                              onChange={(e) => handleChange(e)}
+                            />
+                            <label
+                              className="form-label"
+                              htmlFor="form3Example4cd"
+                            >
+                              Last name
+                            </label>
+                          </div>
+                        </div>
+
+                        <div className="d-flex flex-row align-items-center mb-4">
+                          <i className="fas fa-key fa-lg me-3 fa-fw"></i>
+                          <div className="form-outline flex-fill mb-0">
+                            <input
+                              type=""
+                              id="jobTitle"
+                              className="form-control"
+                              onChange={(e) => handleChange(e)}
+                            />
+                            <label
+                              className="form-label"
+                              htmlFor="form3Example4cd"
+                            >
+                              Job title
+                            </label>
+                          </div>
+                        </div>
+
+                        <div className="d-flex flex-row align-items-center mb-4">
+                          <i className="fas fa-key fa-lg me-3 fa-fw"></i>
+                          <div className="form-outline flex-fill mb-0">
+                            <select
+                              id="state"
+                              className="form-control"
+                              onChange={(e) => handleChange(e)}
+                            >
+                              <StateOption />
+                            </select>
+                            <label
+                              className="form-label"
+                              htmlFor="form3Example4cd"
+                            >
+                              state
+                            </label>
+                          </div>
+                        </div>
+
+                        <div className="d-flex flex-row align-items-center mb-4">
+                          <i className="fas fa-key fa-lg me-3 fa-fw"></i>
+                          <div className="form-outline flex-fill mb-0">
+                            <select
+                              id="city"
+                              className="form-control"
+                              onChange={(e) => handleChange(e)}
+                            >
+                              <CityOption state={userInfo.state} />
+                            </select>
+                            <label
+                              className="form-label"
+                              htmlFor="form3Example4cd"
+                            >
+                              city
                             </label>
                           </div>
                         </div>

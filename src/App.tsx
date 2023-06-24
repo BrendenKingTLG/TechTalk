@@ -2,6 +2,8 @@ import "./App.css";
 import { Routes, Route, HashRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+import { TopNav } from "./components/TopNav";
+import NavBottom from "./components/NavBottom";
 import Home from "./pages/Home";
 import Jobs from "./pages/Jobs";
 import Messages from "./pages/Messages";
@@ -48,6 +50,8 @@ function App() {
             <Route path="signin" element={<SignIn />} />
           </Route>
         </Routes>
+        <TopNav />
+        <NavBottom />
       </HashRouter>
     </>
   );

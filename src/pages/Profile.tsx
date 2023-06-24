@@ -1,5 +1,3 @@
-import { TopNav } from "../components/TopNav";
-import NavBottom from "../components/NavBottom";
 import { auth } from "../../firebase";
 
 const Profile = () => {
@@ -135,8 +133,6 @@ const Profile = () => {
             <div style={{ height: "7em" }}></div>
           </div>
         </section>
-        <TopNav />
-        <NavBottom />
       </div>
     </>
   );

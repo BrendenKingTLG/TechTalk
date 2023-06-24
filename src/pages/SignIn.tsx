@@ -16,7 +16,9 @@ export default function SignIn() {
         navigate("/jobs");
         console.log(auth.currentUser !== null);
       })
-      .catch(() => {});
+      .catch((err) => {
+        alert(err);
+      });
   };
   return (
     <>

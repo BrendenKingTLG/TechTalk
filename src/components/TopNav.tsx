@@ -13,7 +13,7 @@ export function TopNav() {
     <>
       <nav id="nav">
         <div onClick={() => openSettings()}>
-          <BsGear size="1.5em" />
+          <BsGear size="1.5em" fill="white" />
         </div>
         <div id="overlay" className="sidenav">
           <div className="form-check form-switch">
